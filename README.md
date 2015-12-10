@@ -297,3 +297,17 @@ diff комита с этими изменениями будет слишком
 Пример формата — https://metacpan.org/source/BESSARABV/Moment-1.3.0/Changes
 
 ## 29. Не использовать прототипы
+
+## 30. Не использовать постфиксные if и unless
+
+Неправильно ([источник](https://github.com/marcusramberg/Mojolicious-Plugin-MountPSGI/blob/0957b018611ba1e6831ce7198a8e46d9ceaa7f06/lib/Mojolicious/Plugin/MountPSGI.pm#L34)):
+
+    $psgi = $abs if -r $abs;
+
+Неправильно ([источник](https://github.com/marcusramberg/Mojolicious-Plugin-MountPSGI/blob/0957b018611ba1e6831ce7198a8e46d9ceaa7f06/lib/Mojolicious/Plugin/MountPSGI.pm#L20)):
+
+    $path = '/' unless defined $path;
+
+Это нужно было написать так:
+
+    $path //= '/';
