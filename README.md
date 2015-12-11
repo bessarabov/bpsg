@@ -101,7 +101,7 @@ Perl кода my $success = false;](https://ivan.bessarabov.ru/blog/perl-boolean
 
     perl t/sample.t
 
-Если тест работает если указать `perl -Ilib t/sample.t`, то это баг, коорый нужно править
+Если тест работает только если перлу явно указать `-Ilib`, то это баг, коорый нужно править
 (стоит использовать [lib::abs](https://metacpan.org/pod/lib::abs))
 
 Исключение: модуль, который публикуется на CPAN не должен так делать, а
