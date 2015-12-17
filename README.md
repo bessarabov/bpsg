@@ -323,3 +323,20 @@ prove.
 Вот пример шумного diag() — https://gist.github.com/bessarabov/84a5a8033ed676c9e70f
 
 А вот как ведет себя note() — https://gist.github.com/bessarabov/fb4f70ae9fd934a458d9
+
+## 32. POD для приватных саб писать в =begin comment
+
+Если нужно написать POD документацию про приватную сабу, то это нужно делать
+так:
+
+    =begin comment _do_some_internal_stuff
+
+    ...
+
+    =end comment
+
+    =cut
+
+    sub _do_some_internal_stuff {
+        ...
+    }
