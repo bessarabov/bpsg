@@ -340,3 +340,7 @@ prove.
     sub _do_some_internal_stuff {
         ...
     }
+
+## 33. Скрипты должны лежать в папке bin/
+
+А не в папке script/ и не в папке scripts/
